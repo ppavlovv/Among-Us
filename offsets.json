@@ -1,0 +1,25 @@
+{
+  "_comment_1": "Among Us Offset Config - Bu dosyayi kendi offsetlerinize gore duzenleyin",
+  "_comment_2": "Adresler HEX formatinda olmali (0x ile baslamali)",
+  "_comment_3": "Kaynak: IDA Pro / Il2CppDumper / community forums",
+  "_comment_4": "Bu offsetler v18e (build 7250) icin ORNEK degerlerdir",
+
+  "PlayerControl_Class": "0x03018B40",
+  "GameOptionsData_Class": "0x03018BA0",
+  "AmongUsClient_Class": "0x03018A80",
+
+  "PlayerControl_LocalPlayer": "0x5C",
+  "PlayerControl_AllPlayers": "0x60",
+  "PlayerControl_MyData": "0x34",
+  "PlayerControl_MyPhysics": "0x38",
+  "PlayerControl_NetTransform": "0x3C",
+  "PlayerControl_KillTimer": "0x44",
+
+  "PlayerData_IsImpostor": "0x28",
+  "PlayerData_IsDead": "0x29",
+
+  "GameOptions_PlayerSpeedMod": "0x10",
+  "GameOptions_CrewLightMod": "0x14",
+  "GameOptions_ImpostorLightMod": "0x18",
+  "GameOptions_KillCooldown": "0x20"
+}

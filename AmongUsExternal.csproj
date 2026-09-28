@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <UseWindowsForms>true</UseWindowsForms>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>AmongUsMenu</AssemblyName>
+    <RootNamespace>AmongUsExternal</RootNamespace>
+    <Authors>ytpavlov</Authors>
+    <Company>ytpavlov</Company>
+    <Product>KV3 Among Us Tools</Product>
+    <Description>External ESP/radar and local Freeplay tools for a verified Among Us build.</Description>
+    <RepositoryUrl>https://github.com/ytpavlov</RepositoryUrl>
+    <PackageProjectUrl>https://www.youtube.com/@ytpavlov</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SandboxMod\**\*.cs" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,54 @@
+# Build output
+bin/
+obj/
+**/bin/
+**/obj/
+.vs/
+.idea/
+.vscode/
+TestResults/
+
+# Generated executables and symbols
+*.exe
+*.dll
+*.pdb
+*.deps.json
+*.runtimeconfig.json
+
+# Local diagnostics and runtime state
+*.log
+error.log
+crash*.txt
+*.dmp
+
+# Local backups and archives
+*.bak
+*.backup
+*.zip
+*.7z
+*.rar
+
+# Local configuration
+*.user
+*.suo
+*.userprefs
+.env
+.env.*
+!.env.example
+
+# Game/mod-loader files must never be committed
+BepInEx/
+Among Us_Data/
+GameAssembly.dll
+UnityPlayer.dll
+winhttp.dll
+doorstop_config.ini
+
+# Temporary build candidates
+*.new.exe
+*.candidate.exe
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store

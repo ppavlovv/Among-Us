@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>KV3.Sandbox</AssemblyName>
+    <Version>0.3.0</Version>
+    <Authors>ytpavlov</Authors>
+    <Company>ytpavlov</Company>
+    <Product>KV3 Among Us Tools</Product>
+    <AssemblyTitle>KV3 Among Us Tools</AssemblyTitle>
+    <Description>Local Freeplay tools and online local No-clip control for a verified Among Us build.</Description>
+    <RepositoryUrl>https://github.com/ytpavlov</RepositoryUrl>
+    <GamePath Condition="'$(GamePath)' == '' and '$(AMONG_US_PATH)' != ''">$(AMONG_US_PATH)</GamePath>
+    <GamePath Condition="'$(GamePath)' == ''">C:\Program Files\Epic Games\AmongUs</GamePath>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Plugin.cs" />
+    <Compile Include="BridgeServer.cs" />
+    <Compile Include="SandboxPolicy.cs" />
+    <Compile Include="..\SandboxBridgeProtocol.cs" Link="SandboxBridgeProtocol.cs" />
+    <Reference Include="$(GamePath)\BepInEx\core\BepInEx.Core.dll" Private="false" />
+    <Reference Include="$(GamePath)\BepInEx\core\BepInEx.Unity.IL2CPP.dll" Private="false" />
+    <Reference Include="$(GamePath)\BepInEx\core\Il2CppInterop.Runtime.dll" Private="false" />
+    <Reference Include="$(GamePath)\BepInEx\core\0Harmony.dll" Private="false" />
+    <Reference Include="$(GamePath)\BepInEx\interop\*.dll" Private="false" />
+  </ItemGroup>
+  <Target Name="CheckInterop" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(GamePath)\BepInEx\interop\Assembly-CSharp.dll')" Text="Start the game once with BepInEx to generate interop assemblies, then close it before building/installing." />
+  </Target>
+</Project>
